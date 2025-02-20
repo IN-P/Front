@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 이미지 만들기</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            height: 400px;
+            background: url(images/pc_back.jpg) no-repeat center center;
+            background-size: cover;
+            
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            background-color: #eee;
+            padding: 20px;
+        }
+        .box-wrap{
+            width: 500px;
+            border: 5px solid orange;
+            margin: 10px;
+        }
+        .box-wrap img{
+            max-width: 100%;
+            display: block;
+            /* display: block; 이미지는 인라인요소라서 블록에 딱 맞지 않아 블록처리를 해준다*/
+            
+        }
+
+        /* 태블릿 */
+        @media all and (max-width:768px){
+            .header{
+            background-image: url(images/tablet_back.jpg); 
+        }
+            .main{
+                background-color: red;
+            }
+            .box-wrap{
+                width: 300px;
+                border-color:blue;
+                margin: 5px;
+            }
+        }
+        
+        /* 모바일 */
+        @media all and (max-width:320px){
+            .header{
+            background-image: url(images/mobile_back.jpg); 
+        }
+            .main{
+                flex-direction: column;
+                align-items: center;
+            }
+            .box-wrap{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header"></header>
+        <div class="main">
+            <div class="box-wrap">
+                <img src="images/flower.jpg" alt="">
+            </div>
+            <div class="box-wrap">
+                <img src="images/dog.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

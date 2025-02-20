@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex1</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      padding: 0px;
+      margin: 0px;
+    }
+    .s1{
+      width: 500px;
+      height: 120px;
+      background-color: gray;
+      padding: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    p{font-size: 10px; margin-bottom: 10px;}
+    
+    .d1{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .d1 .box{
+      width: 70px;
+      height: 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    .con{
+      width: inherit;
+      height: inherit;
+      display: flex;
+      position: absolute;
+      border: 1px solid red;
+      top: 70px;
+      left: 0px;
+      transition: 1s 0.1s;
+    }
+    .box:hover .con{top:0;}
+    /* 질문사항 */
+  </style>
+
+</head>
+<body>
+  <section class="s1">
+    <p>연습하자</p>
+    <div class="d1">
+      <div class="box box1">
+        <img src="http://placehold.co/70" alt="">
+        <div class="con">A</div>
+      </div>
+      <div class="box box2">
+        <img src="http://placehold.co/70" alt="">
+        <div class="con">B</div>
+      </div>
+      <div class="box box3">
+        <img src="http://placehold.co/70" alt="">
+        <div class="con">C</div>
+      </div>            
+    </div>
+  </section>
+</body>
+</html>

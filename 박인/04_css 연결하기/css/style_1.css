@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* utf-8 : 가장많이 사용 하는 문자 인코딩 표준 */
+
+@import url("style_2.css");
+
+
+
+p{color: hsla(125, 100%, 50%, 1);}
+span{background-color: yellow;}

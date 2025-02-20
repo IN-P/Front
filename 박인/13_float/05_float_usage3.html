@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 레이아웃3</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        *{box-sizing: border-box;}
+        .wrap{
+            width: 1000px;
+            max-width: 1000px;
+            min-width: 800px;
+            margin: auto;
+            border: 5px solid black;
+        }
+
+        .wrap *{margin: 0; padding: 0;}
+
+        .header{
+            background-color: orange;
+            height: 100px;
+        }
+        .main{height: 500px;}
+        .main::after{content:"";display:block;clear:both;}
+
+        .nav{
+            width: 198px;
+            height: 468px;
+            margin-top: 16px;
+            background-color: rgb(150, 150, 179);
+            float: left;
+        }
+        .section{
+            width: 562px;
+            height: 468px;
+            margin: 0 16px 0 16px;
+            margin-top: 16px;
+            background-color: pink;
+            float: left;
+        }
+        .aside{
+            width: 198px;
+            height: 468px;
+            margin-top: 16px;
+            background-color: green;
+            float: left;
+        }
+
+        .footer{
+            background-color: gray;
+            height: 32px;
+            line-height: 32px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>site logo</h1>
+        </header>
+        <main class="main">
+            <nav class="nav">메인메뉴 영역</nav>
+            <section class="section">메인 콘텐츠 영역</section>
+            <aside class="aside">바로가기 메뉴 영역</aside>
+        </main>
+        <footer class="footer">&copy;copyright</footer>
+    </div>
+</body>
+</html>

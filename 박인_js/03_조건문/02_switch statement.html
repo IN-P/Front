@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch 조건문</title>
+    <style>
+        p.syntax {
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <h1>switch 조건문</h1>
+    <ul>
+        <li>조건식의 결과값을 case에서 찾아 일치하는 값이 있을 때 그에 해당하는 코드 실행</li>
+        <li>해당하는 값이 없을 경우 default의 코드를 실행하며 default는 생략 가능하다.</li>
+    </ul>
+    <hr><hr>
+    <p class="syntax">
+        switch(비교할 값) {
+            case 비교값1 : 
+                비교값1의 결과가 true면 이 부분의 코드 실행;
+                break;
+            case 비교값2 : 
+                비교값2의 결과가 true면 이 부분의 코드 실행;
+                break;
+            case 비교값3 : 
+                비교값3의 결과가 true면 이 부분의 코드 실행;
+                break;
+            default : 
+                어떠한 case문에도 해당되지 않은 경우 이 부분의 코드 실행;
+                break;
+        }
+    </p>
+    <button id="cancel-chk">회원탈퇴</button>
+    <script>
+        /**
+         * 회원 탈퇴 버튼을 누르면
+         * confirm()이 뜨고
+         * [확인]을 누르면 true
+         * [취소]를 누르면 false
+        */
+        document.getElementById("cancel-chk").onclick=function(){
+            let result=confirm("회원탈퇴 하실건가요?");
+            switch(result){
+                case true : console.log("탈퇴됨");            
+                break;
+                case false : console.log("취소됨");
+                break;
+            }
+        }
+    </script>
+    <hr>
+    <button id="even-chk">짝수 홀수 구분하기</button>
+    <script>
+        document.getElementById("even-chk").onclick=function(){
+            let num=prompt("숫자를 입력하세요.");
+            // 입력값이 null(취소버튼누를때)이 아니고 공백(입력하지않고확인누를때)이 아닐 때만 진행
+            if(num!=null&&num.trim()!=""){
+                // 입력받은 num이 짝수이면 "짝수입니다.""
+                // 홀수면 "홀수입니다."
+                // 잘못 입력되었습니다.
+                switch(num%2){
+                    case 0:console.log("짝");
+                    break;
+                    case 1:console.log("홀");
+                    break;
+                    default:console.log('잘못입력');
+                    break;
+                }
+            }else{
+                console.log("입력 취소")
+            }
+        }
+    </script>
+    <hr>
+    <button id="month-chk">계절판독</button>
+    <script>
+        /**
+         * 현재 몇 월 인지 입력받는다.
+         * 3, 4, 5 : 봄 
+         * 6, 7, 8 : 여름
+         * 9, 10, 11 : 가을
+         * 12, 1 , 2 : 겨울
+        */
+        document.getElementById("month-chk").onclick=function(){
+            let month=prompt("현재는 몇 월입니까?");
+            
+            if(month!=null&&month.trim()!=""){
+                month = Number(month)
+                // trim은 숫자형에서 에러
+                switch(month){
+                    case 1: case 2: case 12: alert('겨울');
+                    break;
+                    case 3: case 4:case 5: alert('봄');
+                    break;
+                    case 6: case 7:case 8: alert('여름');
+                    break;
+                    case 9: case 10:case 11: alert('가을');
+                    break;
+                    default: console.log("잘못 입력")
+                }
+            }else{
+                console.log("입력 취소")
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+@charset "utf-8";
+@media all and (max-width:430px){
+  body, .wrap, .header, .main, .section, .footer{
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+    border: 0px;
+  }
+  .header{
+    padding: 96px 20px 30px 20px;
+    height: 150px;
+  }
+  .header h2 {display: none;}
+  .header p {display: none;}
+  .section{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap :2px;
+    width: 370px;
+    height: 463px;
+    grid-template-areas:
+    'B7 B8 B9 BD'
+    'B4 B5 B6 BM'
+    'B1 B2 B3 BS'
+    'B0 B0 Bd BA'
+    'BE BE BE BE'
+    ;
+  }
+  .btn0, .btn1, .btn2, .btn3, .btn4, .btn5, .btn6, .btn7, .btn8, .btn9, .btnDot{
+    background-color: rgb(66, 66, 66);
+  }
+  .btnAdd, .btnSubtract, .btnMultiply, .btnDivide, .btnEnter{
+    background-color: rgb(255, 155, 0);
+  }
+  .btn{border-radius:50% ; color: #fff;}
+  .btn0{border-radius: 45.5px;}
+  .btnEnter{border-radius: 45.5px;}
+  .btnNumLock{display:none;}
+  .footer{
+    color: #fff;
+    padding: 30px;
+  }
+}

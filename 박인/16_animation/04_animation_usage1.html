@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 애니메이션 활용1</title>
+  <style>
+    *{box-sizing: border-box;}
+    .wrap{
+      width: 1200px;
+      padding: 30px;
+      background-color: gray;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .flex-wrapping{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .box{
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      transition: 0.2s;
+    }
+    .box:hover{
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    .box .content{
+      width: inherit;
+      height: inherit;
+      /* inherit (부모에게 상속받음) */
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      left: 0;
+      top: 100%;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      transition: 0.5s 0.1s;
+    }
+    .box:hover .content{
+      top: 0;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="wrap">
+    <h1>Hover Effect</h1>
+    <div class="flex-wrapping">
+      <div class="box box1">
+        <img src="http://placehold.co/300" alt="">
+        <div class="content">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur neque dolores nemo ducimus id ipsa perspiciatis tenetur tempora nihil quo?
+        </div>
+      </div>
+      <div class="box box2">
+        <img src="http://placehold.co/300" alt="">
+        <div class="content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab libero veniam magni aliquid ut, repellendus, commodi nisi delectus nobis molestias quaerat voluptatum voluptate sed perferendis non! Vero, amet quos iure doloribus laborum eos rerum aut, obcaecati dolore, exercitationem ut sint.
+        </div>
+      </div>
+      <div class="box box3">
+        <img src="http://placehold.co/300" alt="">
+        <div class="content">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis sit quis fugit dignissimos, optio veritatis similique beatae excepturi temporibus corrupti vitae ut, sequi nam deserunt doloremque ipsa amet natus ipsum.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

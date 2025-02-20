@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid 레이아웃 연습</title>
+  <style>
+    .grid-wrap{
+      
+      width: 90%;
+      max-width: 1200px;
+      min-width: 600px;
+      height: 500px;
+      border: 5px solid black;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 20fr 60fr 20fr;
+      grid-template-rows: 20fr 70fr 10fr;
+      gap: 10px;
+      grid-template-areas:
+      'box1 box1 box1'
+      'box2 box3 box4'
+      'box5 box5 box5'
+      ;  
+    }
+    
+    .box{padding: 0;}
+    .box1{grid-area: box1;background-color:orange ;}
+    .box2{grid-area: box2;background-color:pink;}
+    .box3{grid-area: box3;background-color:lightgray;}
+    .box4{grid-area: box4;background-color:aqua;}
+    .box5{grid-area: box5;background-color:gray;}
+
+  </style>
+</head>
+<body>
+  <div class="grid-wrap">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>표 만들기</title>
+  <style>
+    table, th, td{
+      border: 1px solid red;
+      /* border-spacing: 0px; */
+      border-collapse: collapse;
+    }
+    
+    th, td{
+      padding: 10px;
+    }
+    thead{
+      background-color: lightcoral;
+    }
+    tfoot{text-align: center;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>객실정보</h1>
+    <hr><hr>
+    <table>
+      <caption>요안도라 객실<!-- 표이름?--></caption>
+      <!-- 세로줄 그룹핑 이게다임 -->
+      <colgroup>
+        <col>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+      <!-- &nbsp; 빈여백 빈공간 -->
+      <!-- 가로줄 그룹핑 티해드 티바디 티풋-->
+      <!-- 제목 줄 -->
+      <thead>
+        <tr>
+          <th scope="col">방 이름</th>
+          <th scope="col">대상</th>
+          <th scope="col">크기</th>
+          <th scope="col">가격</th>
+          <!-- scope="col"세로줄 대표
+           scope+'row 가로줄 대표' -->
+        </tr>
+      </thead>
+      <!-- 본문 줄 -->
+      <tbody>
+        <tr>
+          <td>유채방</td>
+          <td>여성 도미토리</td>
+          <td rowspan="3">4인실</td>
+          <td rowspan="4">1인 20,000원</td>
+        </tr>
+        <tr>
+          <td rowspan="2">동백방</td>
+          <td>동성 도미토리</td>
+          <!-- <td>&nbsp;</td> -->
+          <!-- <td>&nbsp;</td> -->
+        </tr>
+        <tr>
+          <!-- <td>&nbsp;</td> -->
+          <td>가족 1팀</td>
+          <!-- <td>&nbsp;</td> -->
+          <!-- <td>&nbsp;</td> -->
+        </tr>
+        <tr>
+          <td>천혜향방</td>
+          <td>-</td>
+          <td>2인실</td>
+          <!-- <td>&nbsp;</td> -->
+        </tr>
+      </tbody>
+      <!-- 꼬리줄 -->
+      <tfoot>
+        <tr>
+          <td colspan="4">바깥채 전체를 렌트합니다.</td>
+          <!-- <td>&nbsp;</td> -->
+          <!-- <td>&nbsp;</td> -->
+          <!-- <td>&nbsp;</td> -->
+        </tr>
+      </tfoot>
+
+
+    </table>
+  </div>
+</body>
+</html>

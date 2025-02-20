@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하이퍼링크</title>
+</head>
+<body>
+  <!-- 
+    a : 하이퍼링크
+    - href가 필수 속성
+    - href 속성값 : url, 파일명, 메일주소(outlook), 전화번호(모바일), 임시링크
+    - target 어떻게 열것인가 속성
+    - id="아이디" , href="#아이디"(아이디로 바로가기)
+    - 단축키 alt+방향키 (이동)
+    - 단축키 alt+shift+방향키 (이동복사)
+  -->
+  <h1>하이퍼링크</h1>
+  <a href="#">임시링크</a><br>
+  <a href="http://naver.com" target="_blank" title="네이버로 이동">네이버</a><br>
+  <a href="01_heading.html" target="_blank">제목 문서 페이지로 이동</a><br>
+  <a href="img/cat.jpg" target="_blank">고양이 그림으로 이동</a><br>
+  <hr><hr>
+  <a href="http://cafe.naver.com/jinissamne" target="_blank"><img src="img/cat.jpg"></a>
+  <hr><hr>
+
+  <h2>바로가기 메뉴 만들기</h2>
+  <ul>
+    <li><a href="#rabbit">토끼</a></li>
+    <li><a href="#turtle">거북이</a></li>
+  </ul>
+  <p id="rabbit" style="border: 10px solid red; height:500px;">
+    나는 토끼
+  </p>
+  <P id="turtle" style="border: 10px solid blue; height: 500px;">
+    나는 거북이
+  </P>
+
+</body>
+</html>

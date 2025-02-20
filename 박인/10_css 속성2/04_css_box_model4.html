@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진 겹침 현상</title>
+    <!-- 
+        마진 겹침 현상1
+        - 블록 요소가 세로로 놓이면 margin-top과 -bottom의 값이 합쳐지는 것이 아니라 두 값중 큰 값으로 겹침
+
+        마진 겹침 현상2
+        - 블록 요소 안에 블록 요소가 포함되는 경우 자식 블록 요소의 margin-top과 -bottom은 부모 블록 요소 밖으로 겹쳐진다.
+        - 해결 : 부모 블록 요소에 border-width 또는 padding을 부여한다.
+    -->
+    <style>
+        *{margin: 0; padding: 0;}
+        .wrap{
+            width: 10020px;
+            margin: auto;
+        }
+        .box1{
+            padding-top: 20px;
+            border-bottom: 20px solid yellow;
+            background-color: yellow;
+        }
+        li{
+            list-style: none;
+            border: 1px solid red;
+        }
+        .list{
+            margin: 30px 50px;
+        }
+        .list2{
+            margin-top: 40px;
+        }
+        .parent{
+            background-color: pink;
+            padding-top: 0.1px;
+            border-bottom: 0.1px solid pink;
+        }
+        .child{
+            background-color: aqua;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1 class="title">마진 겹침 현상</h1>
+        <ul class="box1">
+            <li class="list list1">list1</li>
+            <li class="list list2">list2</li>
+            <li class="list list3">list3</li>
+            <li class="list list4">list4</li>
+            <li class="list list5">list5</li>
+        </ul>
+        <div class="box2 parent">
+            <p class="child">paragraph</p>
+        </div>
+    </div> 
+</body>
+</html>

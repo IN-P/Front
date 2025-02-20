@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>인접 형제 선택자와 일반 형제 선택자</title>
+	<!-- 
+	앞+뒤 인접형제 선택 뒤가 선택 (아랫줄)
+	앞~뒤 일반형제 선택 뒤가 선택
+	-->
+
+	<style>
+		h2{color: red;}
+		h2+p{background-color: yellow;}
+		h2~p{color: red; font-weight: bold;}
+		/* hr {height : 10px; background-color : orange;} */
+		h1~hr{height: 20px; background-color: blue;}
+		h1+hr{height: 10px; background-color: orange;}
+		/* 적용순서 중요하니 잘 살펴볼 것 */
+	</style>
+
+
+</head>
+<body>
+	<h1>연결 선택자</h1>
+	<hr>
+	<div class="box">
+		<h2>형제 선택자</h2>
+		<p>형제 관계에 있는 태그를 선택할 때 사용할 수 있다.</p>
+		<hr>
+		<h3>인접 형제 선택자</h3>
+		<p>기준이 되는 선택자 바로 뒤에 인접해 있는 선택자이다.</p>
+		<h3>일반 형제 선택자</h3>
+		<p>기준이 되는 선택자 뒤에 위치하는 선택자들이다. </p>
+	</div>
+	<hr>
+	<footer>copyright</footer>
+</body>
+</html>

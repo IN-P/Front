@@ -1,0 +1,114 @@
+@charset "utf-8";
+@import url(reset.css);
+
+/* <main class="main">
+  <section class="section">
+    <button class="btn btn0">0</button>
+    <button class="btn btn1">1</button>
+    <button class="btn btn2">2</button>
+    <button class="btn btn3">3</button>
+    <button class="btn btn4">4</button>
+    <button class="btn btn5">5</button>
+    <button class="btn btn6">6</button>
+    <button class="btn btn7">7</button>
+    <button class="btn btn8">8</button>
+    <button class="btn btn9">9</button>
+    <button class="btn btnDot">.</button>
+    <button class="btn btnAdd">+</button>
+    <button class="btn btnSubtract">-</button>
+    <button class="btn btnMultiply">*</button>
+    <button class="btn btnDivide">/</button>
+    <button class="btn btnEnter">Enter</button>
+    <button class="btn btnNumLock">Num<br>Lock</button>
+  </section>
+</main> */
+*{box-sizing: border-box;}
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 20px;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 170, 0.8);
+  border: 2px solid black;
+  color: #fff;
+  border-radius: 8px;
+  width: 410px;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 15px;
+  gap: 16px;
+}
+.header h1{
+  font-size: 24px;
+  font-weight: bolder;
+}
+.header h2{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  border: 4px double black;
+  background-color: rgb(216, 216, 216);
+  border-radius: 12px;
+}
+.section{
+  width: 406px;
+  height: 508px;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+  'BN BD BM BS'
+  'B7 B8 B9 BA'
+  'B4 B5 B6 BA'
+  'B1 B2 B3 BE'
+  'B0 B0 Bd BE';  
+}
+.btn{
+  font-size: 24px;
+  font-weight: bold;
+  border: 3px solid black;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 1px 1px 2px black;
+}
+.btn:active{background-color: rgb(0, 0, 0);}
+.btn0{grid-area: B0;}
+.btn1{grid-area: B1;}
+.btn2{grid-area: B2;}
+.btn3{grid-area: B3;}
+.btn4{grid-area: B4;}
+.btn5{grid-area: B5;}
+.btn6{grid-area: B6;}
+.btn7{grid-area: B7;}
+.btn8{grid-area: B8;}
+.btn9{grid-area: B9;}
+.btnDot{grid-area: Bd;}
+.btnAdd{grid-area: BA;}
+.btnSubtract{grid-area: BS;}
+.btnMultiply{grid-area: BM;}
+.btnDivide{grid-area: BD;}
+.btnEnter{grid-area: BE;}
+.btnNumLock{grid-area: BN;}
+.footer{
+  margin-top: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list {
+            font-size: 45px;
+        }
+        .m1{
+            color: red;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .m2{
+            color: red;
+            text-align: center;
+            text-shadow: 4px 4px 4px orangered;
+        }
+        .list{
+            border: 2px solid purple;
+            background-color: yellow;
+            padding: 20px;    
+        }
+        .list dt{font-size: 24px; color: green;}
+        .list dd{font-size: 16px; color: blue;}
+        span{
+            font-weight: bold;
+            color: darkblue; 
+            background-color: orange;
+        }
+        .list span{
+            font-size: 16px;
+            vertical-align: sub
+        }
+        .list1 span{
+            font-size: 16px;
+            vertical-align: super;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="m1">화학 기호</h1>
+        <dl class="list">
+            <dt>H<span>2</span>O</dt>
+            <dd>물</dd>
+            <dt>CO<span>2</span></dt>
+            <dd>이산화탄소</dd>
+        </dl>
+        <h1 class="m2">승수 계산</h1>
+        <dl class="list list1">
+            <dt>2<span>3</span></dt>
+            <dd>8</dd>
+            <dt>1<span>100</span></dt>
+            <dd>1</dd>
+        </dl>
+    </div>
+</body>
+</html>
